@@ -1,0 +1,55 @@
+/* ----------------------------------------------------------------------
+ULHT: temp (apagar em produção)
+---------------------------------------------------------------------- */
+/* wireframe */
+@grey:#333;
+@wirebox1: @grey;
+@wirebox2: @wirebox1 * 2;
+@wirebox3: @wirebox1 * 3;
+
+
+.wirebox1 {
+    background-color:@wirebox1;
+    }
+.wirebox2 {
+    background-color:@wirebox2;
+    }
+.wirebox3 {
+    background-color:@wirebox3;
+    }
+
+/* img */
+img {
+    border-radius: 10px;
+    }
+
+/* ----------------------------------------------------------------------
+ULHT: variaveis
+---------------------------------------------------------------------- */
+@1: 16px;                           // unidade base = 16px (1em)
+
+@default-spacing-vertical: @1;      // default vertical
+@default-spacing-horizontal: @1;    // default horizontal
+
+.default-spacing(                   // default all
+    @margin: @default-spacing-vertical @default-spacing-horizontal;
+    @padding:@default-spacing-vertical @default-spacing-horizontal){
+        margin: @margin; 
+        padding: @padding; 
+    }
+
+/* ----------------------------------------------------------------------
+ULHT: pagina interna
+---------------------------------------------------------------------- */
+
+/* footer */
+#footer {
+    margin: @default-spacing-vertical 0;
+    padding: @default-spacing-vertical 0;
+
+    #footer-a,
+    #footer-b, 
+    #footer-c {
+        .default-spacing(@margin: auto);
+        }
+    }
